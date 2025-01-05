@@ -44,7 +44,7 @@ body {
     color: #ff69b4;
 }
 
-.container {
+.container, .containerV2 {
     text-align: center;
     background: #ffffff;
     padding: 20px;
@@ -52,21 +52,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     margin-top: 60px;
+    
 }
 
-.containerV2 {
-    text-align: center;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    margin-top: 60px;
-    display: block;
-    left: 100px;
-}
-
-.phoneme {
+.phoneme, .hiragana {
     font-size: 10em;
     margin: 20px 0;
     cursor: pointer;
@@ -74,9 +63,7 @@ body {
 }
 
 .hiragana {
-    font-size: 10em;
     color: #0078d7;
-    margin-top: 10px;
     display: none;
 }
 
@@ -109,10 +96,10 @@ body {
 }
 
 .wrapper {
-    display: flex;
+    display: flex;  
     align-items: center;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: center;
+    width: 100%; /* Ajustar el ancho para móviles */
     margin: auto;
 }
 
@@ -123,7 +110,31 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    height: 100%;
+    width: 90%; /* Ajustar el ancho para móviles */
+    max-width: 150px; /* Limitar el ancho máximo */
 }
 
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .phoneme, .hiragana {
+        font-size: 5em; /* Reducir el tamaño de la fuente para móviles */
+    }
+
+    .navbar a {
+        font-size: 1rem; /* Reducir el tamaño de la fuente de la navbar */
+    }
+
+    .result {
+        font-size: 1.5rem; /* Reducir el tamaño de la fuente de resultados */
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .toggle-button {
+        width: 50px; /* Ajustar el tamaño del botón */
+        height: 50px;
+        font-size: 1.2rem; /* Ajustar el tamaño de la fuente del botón */
+    }
+}

@@ -44,6 +44,19 @@ containerElementV2.addEventListener('click', () => {
     }
 });
 
+function siguiente() {
+    if (hiraganaElementV2.style.display === 'none') {
+        hiraganaElementV2.textContent = showPhonemeV2 ? currentPairV2.hiragana : currentPairV2.phoneme;
+        hiraganaElementV2.style.display = 'block';
+        enableDraggable(true);
+    } else {
+        currentPairV2 = getRandomHiragana();
+        phonemeElementV2.textContent = showPhonemeV2 ? currentPairV2.phoneme : currentPairV2.hiragana;
+        hiraganaElementV2.style.display = 'none';
+        enableDraggable(false);
+    }
+}
+
 // DraggableJS y lógica de resultados
 let draggableInstance = null;
 
@@ -55,14 +68,13 @@ function enableDraggable(enable) {
 
     if (enable) {
         draggableInstance = new Draggable.Draggable(containerElementV2, {
-            draggable: '.container2', // Asegúrate de que este sea el elemento que deseas arrastrar
+            draggable: '.container2',
             dropzone: '.BlockWrapper--isDropzone',
             delay: 0,
             mirror: { constrainDimensions: true },
         });
 
         draggableInstance.on('drag:start', (evt) => {
-            // Aquí puedes realizar cualquier acción que necesites al iniciar el arrastre
             console.log('Arrastre iniciado');
             initialMousePosition = {
                 x: evt.sensorEvent.clientX,
@@ -72,25 +84,37 @@ function enableDraggable(enable) {
 
         draggableInstance.on('drag:stop', (evt) => {
             const draggableRect = containerElementV2.getBoundingClientRect();
-            const errorRect = errorElement.getBoundingClientRect();
-            const aciertoRect = aciertoElement.getBoundingClientRect();
-            console.log('Initial', initialMousePosition)
-            console.log('drag', draggableRect)
-            console.log('err', errorRect)
-            console.log('success', aciertoRect)
 
             const targetX = event.detail.data.clientX;
             const targetY = event.detail.data.clientY;
 
-            if (targetX < draggableRect.x) {
-                errores++; // Aumenta el contador
-                errorElement.textContent = `Errores: ${errores}`; // Actualiza el contador en la pantalla
-            } else if (targetX > draggableRect.x + 250) {
-                aciertos++; // Aumenta el contador
-                aciertoElement.textContent = `Aciertos: ${aciertos}`; // Actualiza el contador en la pantalla
+            // Verificar si el dispositivo es móvil
+            const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+            if (isMobile) {
+                if (targetY < draggableRect.top) {
+                    errores++; // Aumenta el contador
+                    errorElement.textContent = `Errores: ${errores}`; // Actualiza el contador en la pantalla
+                    siguiente();
+                } else if (targetY > draggableRect.bottom) {
+                    aciertos++; // Aumenta el contador
+                    aciertoElement.textContent = `Aciertos: ${aciertos}`; // Actualiza el contador en la pantalla
+                    siguiente();
+                }
+            } else {
+                if (targetX < draggableRect.x) {
+                    errores++; // Aumenta el contador
+                    errorElement.textContent = `Errores: ${errores}`; // Actualiza el contador en la pantalla
+                    siguiente();
+                } else if (targetX > draggableRect.x + 250) {
+                    aciertos++; // Aumenta el contador
+                    aciertoElement.textContent = `Aciertos: ${aciertos}`; // Actualiza el contador en la pantalla
+                    siguiente();
+                }
             }
+
+            containerElement2.style.transform = 'translateX(0)';
             
-            containerElement2.style.transform = 'translateX(0)'; // Asegúrate de que esto no afecte el arrastre
         });
     }
 }
