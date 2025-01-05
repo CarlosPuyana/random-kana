@@ -34,14 +34,17 @@ toggleButtonV2.addEventListener('click', () => {
 });
 
 repetirButtonV2.addEventListener('click', () => {
-    errores = 0;
-    errorElement.textContent = `Errores: ${errores}`;
-    aciertos = 0;
-    aciertoElement.textContent = `Aciertos: ${aciertos}`; 
-    lecciones.length = 0;
-    lecciones.push(...errorArray);
-    currentPairV2 = getRandomHiragana();
-    siguiente(true);
+    if (errorArray.length > 0) {
+        errores = 0;
+        errorElement.textContent = `Errores: ${errores}`;
+        aciertos = 0;
+        aciertoElement.textContent = `Aciertos: ${aciertos}`; 
+        lecciones.length = 0;
+        lecciones.push(...errorArray);
+        currentPairV2 = getRandomHiragana();
+        siguiente(true);
+    }
+    
 });
 
 containerElementV2.addEventListener('click', () => {
