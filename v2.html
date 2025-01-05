@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Hiragana V2</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" id="navInicio">Inicio</a></li>
+            <li><a href="v2.html" id="navV2">V2</a></li>
+        </ul>
+    </nav>
+    <button id="toggleButton" class="toggle-button">↺</button>
+    <div class="wrapper">
+        <div class="BlockWrapper BlockWrapper--isDropzone result" id="error">Errores: 0</div>
+        <div class="containerV2" id="containerV2">
+            <div class="container2" id="container2">
+                <div class="phoneme" id="phoneme">Haz clic aquí</div>
+                <div class="hiragana" id="hiragana"></div>
+            </div>
+            
+        </div>
+        <div class="result" id="acierto">Aciertos: 0</div>
+    </div>
+
+    <script src="constants.js"></script>
+    <script src="app_v2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.legacy.js"></script>
+
+</body>
+</html>
