@@ -99,7 +99,7 @@ function enableDraggable(enable) {
                 if (targetY < draggableRect.top) {
                     errores++; // Aumenta el contador
                     errorElement.textContent = `Errores: ${errores}`; // Actualiza el contador en la pantalla
-                    errorArray.push(currentPairV2)
+                    errorArray.push(currentPairV2);
                     siguiente();
                 } else if (targetY > draggableRect.bottom) {
                     aciertos++; // Aumenta el contador
@@ -110,6 +110,7 @@ function enableDraggable(enable) {
                 if (targetX < draggableRect.x) {
                     errores++; // Aumenta el contador
                     errorElement.textContent = `Errores: ${errores}`; // Actualiza el contador en la pantalla
+                    errorArray.push(currentPairV2);
                     siguiente();
                 } else if (targetX > draggableRect.x + 250) {
                     aciertos++; // Aumenta el contador
