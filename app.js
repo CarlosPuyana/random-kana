@@ -10,8 +10,8 @@ phonemeElement.textContent = currentPair.phoneme;
 hiraganaElement.style.display = 'none';
 
 function getRandomHiragana() {
-    const randomIndex = Math.floor(Math.random() * leccion1.length);
-    return leccion1[randomIndex];
+    const randomIndex = Math.floor(Math.random() * lecciones.length);
+    return lecciones[randomIndex];
 }
 
 toggleButton.addEventListener('click', () => {

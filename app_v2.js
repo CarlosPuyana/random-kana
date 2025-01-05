@@ -20,8 +20,8 @@ phonemeElementV2.textContent = currentPairV2.phoneme;
 hiraganaElementV2.style.display = 'none';
 
 function getRandomHiragana() {
-    const randomIndex = Math.floor(Math.random() * leccion1.length);
-    return leccion1[randomIndex];
+    const randomIndex = Math.floor(Math.random() * lecciones.length);
+    return lecciones[randomIndex];
 }
 
 toggleButtonV2.addEventListener('click', () => {
