@@ -3,6 +3,7 @@ const containerElement2 = document.getElementById('container2');
 const phonemeElementV2 = document.getElementById('phoneme');
 const hiraganaElementV2 = document.getElementById('hiragana');
 const toggleButtonV2 = document.getElementById('toggleButton');
+const repetirButtonV2 = document.getElementById('repetirButton');
 const errorElement = document.getElementById('error');
 const aciertoElement = document.getElementById('acierto');
 
@@ -11,6 +12,7 @@ let currentPairV2 = getRandomHiragana();
 let errores = 0;
 let aciertos = 0;
 let initialMousePosition;
+const errorArray = [];
 
 function calcOffset(offset) {
     return offset * 2 * 0.5;
@@ -31,21 +33,23 @@ toggleButtonV2.addEventListener('click', () => {
     hiraganaElementV2.style.display = 'none';
 });
 
-containerElementV2.addEventListener('click', () => {
-    if (hiraganaElementV2.style.display === 'none') {
-        hiraganaElementV2.textContent = showPhonemeV2 ? currentPairV2.hiragana : currentPairV2.phoneme;
-        hiraganaElementV2.style.display = 'block';
-        enableDraggable(true);
-    } else {
-        currentPairV2 = getRandomHiragana();
-        phonemeElementV2.textContent = showPhonemeV2 ? currentPairV2.phoneme : currentPairV2.hiragana;
-        hiraganaElementV2.style.display = 'none';
-        enableDraggable(false);
-    }
+repetirButtonV2.addEventListener('click', () => {
+    errores = 0;
+    errorElement.textContent = `Errores: ${errores}`;
+    aciertos = 0;
+    aciertoElement.textContent = `Aciertos: ${aciertos}`; 
+    lecciones.length = 0;
+    lecciones.push(...errorArray);
+    currentPairV2 = getRandomHiragana();
+    siguiente(true);
 });
 
-function siguiente() {
-    if (hiraganaElementV2.style.display === 'none') {
+containerElementV2.addEventListener('click', () => {
+    siguiente();
+});
+
+function siguiente(si = false) {
+    if (hiraganaElementV2.style.display === 'none' && !si) {
         hiraganaElementV2.textContent = showPhonemeV2 ? currentPairV2.hiragana : currentPairV2.phoneme;
         hiraganaElementV2.style.display = 'block';
         enableDraggable(true);
@@ -95,6 +99,7 @@ function enableDraggable(enable) {
                 if (targetY < draggableRect.top) {
                     errores++; // Aumenta el contador
                     errorElement.textContent = `Errores: ${errores}`; // Actualiza el contador en la pantalla
+                    errorArray.push(currentPairV2)
                     siguiente();
                 } else if (targetY > draggableRect.bottom) {
                     aciertos++; // Aumenta el contador
