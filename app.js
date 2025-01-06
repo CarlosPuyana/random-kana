@@ -3,6 +3,7 @@ const containerElement = document.getElementById('container');
 const phonemeElement = document.getElementById('phoneme');
 const hiraganaElement = document.getElementById('hiragana');
 const toggleButton = document.getElementById('toggleButton');
+v3 = false;
 
 let showPhoneme = true;
 let currentPair = getRandomHiragana();

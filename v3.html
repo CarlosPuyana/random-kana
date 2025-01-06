@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica Hiragana V2</title>
-    <link rel="stylesheet" href="index2.css">
+    <title>Practica Hiragana</title>
+    <link rel="stylesheet" href="v3.css">
 </head>
 <body>
     <nav class="navbar">
@@ -15,18 +15,15 @@
             <li><a href="v3.html" id="navDraw">Opciones</a></li>
         </ul>
     </nav>
-    <button id="repetirButton" class="toggle-button2">X</button>
-    <button id="toggleButton" class="toggle-button">↺</button>
-    <div class="wrapper">
-        <div class="result" id="error">Errores: 0</div>
-        <div class="containerV2" id="containerV2">
-            <div class="container2" id="container2">
-                <div class="phoneme" id="phoneme">Haz clic aquí</div>
-                <div class="hiragana" id="hiragana"></div>
-            </div>
-            
+    
+    <div class="quiz-container">
+        <div class="hiragana-display" id="hiraganaDisplay">あ</div>
+        <div class="options-container">
+            <button class="option-button" data-index="0">a</button>
+            <button class="option-button" data-index="1">i</button>
+            <button class="option-button" data-index="2">u</button>
+            <button class="option-button" data-index="3">e</button>
         </div>
-        <div class="result" id="acierto">Aciertos: 0</div>
     </div>
 
     <!-- Contenedor para los botones -->
@@ -36,10 +33,7 @@
         <button class="class-button">L3</button>
         <button class="class-button">ALL</button>
     </div>
-
     <script src="constants.js"></script>
-    <script src="app_v2.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.legacy.js"></script>
-
+    <script src="app_v3.js"></script>
 </body>
 </html>

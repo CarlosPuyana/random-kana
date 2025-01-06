@@ -1,4 +1,5 @@
 const lecciones = [];
+let v3 = false;
 
 const leccion1 = [
     { phoneme: 'a', hiragana: 'あ' },
@@ -103,6 +104,8 @@ document.querySelector('.button-container').addEventListener('click', (event) =>
     if (event.target.classList.contains('class-button')) {
         const buttonText = event.target.textContent;
         updateLecciones(buttonText);
+
+        if (v3) nuevoDesafio();
     }
 });
 

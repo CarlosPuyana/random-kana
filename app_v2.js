@@ -7,6 +7,8 @@ const repetirButtonV2 = document.getElementById('repetirButton');
 const errorElement = document.getElementById('error');
 const aciertoElement = document.getElementById('acierto');
 
+v3 = false;
+
 let showPhonemeV2 = true;
 let currentPairV2 = getRandomHiragana();
 let errores = 0;
