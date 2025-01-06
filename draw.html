@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica Hiragana</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Dibuja Hiragana</title>
+    <link rel="stylesheet" href="draw.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="/" id="navInicio">Inicio</a></li>
-            <li><a href="v2.html" id="navV2">V2</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="v2.html">V2</a></li>
             <li><a href="draw.html" id="navDraw">Dibuja Hiragana</a></li>
         </ul>
     </nav>
-    <button id="toggleButton" class="toggle-button">↺</button>
-    <div class="container" id="container">
-        <div class="phoneme" id="phoneme">Haz clic aquí</div>
-        <div class="hiragana" id="hiragana"></div>
+    <div class="drawing-container">
+        <div class="phoneme-reference" id="phonemeReference">a</div>
+        <canvas id="drawCanvas"></canvas>
+        <div class="controls">
+            <button id="clearCanvas">Limpiar</button>
+            <button id="checkCanvas">Comprobar</button>
+        </div>
+        <div class="hiragana-result" id="hiraganaResult" style="display: none;">あ</div>
     </div>
 
     <!-- Contenedor para los botones -->
@@ -27,7 +31,8 @@
         <button class="class-button">L3</button>
         <button class="class-button">ALL</button>
     </div>
+
     <script src="constants.js"></script>
-    <script src="app.js"></script>
+    <script src="draw.js"></script>
 </body>
 </html>

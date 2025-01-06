@@ -187,3 +187,57 @@ body {
 .controls button:hover {
     background-color: #005bb5;
 }
+
+
+/* Contenedor de dibujo */
+.drawing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+}
+
+#phonemeReference {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#drawCanvas {
+    border: 1px solid black;
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 4 / 3; /* Mantiene proporción */
+    touch-action: none; /* Evita zoom en dispositivos táctiles */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #005bb5;
+}
+
+#hiraganaResult {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0078d7;
+    margin-top: 15px;
+}
