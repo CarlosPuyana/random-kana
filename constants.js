@@ -34,8 +34,8 @@ const leccion1 = [
 
 const leccion2 = [
     { phoneme: 'ta', hiragana: 'た' },
-    { phoneme: 'ti', hiragana: 'ち' },
-    { phoneme: 'tu', hiragana: 'つ' },
+    { phoneme: 'chi', hiragana: 'ち' },
+    { phoneme: 'tsu', hiragana: 'つ' },
     { phoneme: 'te', hiragana: 'て' },
     { phoneme: 'to', hiragana: 'と' },
 

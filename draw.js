@@ -5,6 +5,11 @@ const hiraganaResult = document.getElementById('hiraganaResult');
 const clearButton = document.getElementById('clearCanvas');
 const checkButton = document.getElementById('checkCanvas');
 
+ctx.lineWidth = 2; // Establece el grosor de la línea (2px recomendado)
+ctx.lineCap = 'round'; // Hace que las líneas sean redondeadas en los extremos
+ctx.strokeStyle = 'black'; // Color de la línea
+
+
 let isDrawing = false;
 
 function getRandomHiragana() {
@@ -56,22 +61,22 @@ function stopDrawing() {
 }
 
 function getEventCoordinates(event) {
+    const rect = canvas.getBoundingClientRect(); // Obtén el área del lienzo
     if (event.touches && event.touches.length > 0) {
         const touch = event.touches[0];
-        const rect = canvas.getBoundingClientRect(); // Posición del lienzo
         return {
             offsetX: touch.clientX - rect.left,
             offsetY: touch.clientY - rect.top,
         };
     } else if (event.offsetX !== undefined && event.offsetY !== undefined) {
-        // Eventos de mouse
         return {
-            offsetX: event.offsetX,
-            offsetY: event.offsetY,
+            offsetX: event.clientX - rect.left, // Usa clientX y ajusta con rect.left
+            offsetY: event.clientY - rect.top, // Usa clientY y ajusta con rect.top
         };
     }
-    return { offsetX: 0, offsetY: 0 }; // Fallback por si el evento no tiene coordenadas
+    return { offsetX: 0, offsetY: 0 }; // Fallback
 }
+
 
 
 // Limpiar lienzo y obtener nuevo fonema
