@@ -113,5 +113,6 @@ updateLecciones('L1');
 
 const buttonKata = document.getElementById('toggleButtonKata');
 buttonKata.addEventListener('click', () => {
-    window.location.href = './kata/inicio/inicio_kata.html';
+    const basePath = window.location.pathname.includes('/random-kana') ? '/random-kana' : '';
+    window.location.href = `${basePath}/kata/inicio/inicio_kata.html`;
 });
