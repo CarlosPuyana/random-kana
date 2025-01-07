@@ -1,0 +1,44 @@
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.katakana-display {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 300px;
+}
+
+.option-button {
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #c2016b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-button:hover {
+    background-color: #c2216b;
+}
+
+.option-button.correct {
+    background-color: #28a745; /* Verde para correcto */
+    color: white;
+}
+
+.option-button.incorrect {
+    background-color: #dc3545; /* Rojo para incorrecto */
+    color: white;
+}

@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+}
+
+/* Menú navegación superior */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #c2016b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff69b4;
+}
+
+/* --------------------------------------- */
+/* Estilos katakana/Fonema en pantalla */
+
+.phoneme, .katakana {
+    font-size: 10em;
+    margin: 20px 0;
+    cursor: pointer;
+    color: #333;
+}
+
+.katakana {
+    color: #c2016b;
+    display: none;
+}
+
+/* --------------------------------------- */
+/* Botón cambiar Fonema/katakana */
+
+.toggle-button {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #a10f3b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-button:hover {
+    background-color: #961139;
+    transform: scale(1.1);
+}
+
+.toggle-button:active {
+    transform: scale(0.95);
+}
+
+/* --------------------------------------- */
+/* Botón cambiar katakana/Katakana */
+
+button#toggleButtonKata {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-button-kata:hover {
+    background-color: #ff1493;
+    transform: scale(1.1);
+}
+
+.toggle-button-kata:active {
+    transform: scale(0.95);
+}
+
+/* --------------------------------------- */
+/* Botón cambiar nivel */
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: #f0f8ff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.class-button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #c2016b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.class-button:hover {
+    background-color: #005bb5;
+}
+/* --------------------------------------- */
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .phoneme, .katakana {
+        font-size: 5em;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .result {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .toggle-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .toggle-button2 {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+/* --------------------------------------- */
