@@ -113,6 +113,5 @@ updateLecciones('L1');
 
 const buttonKata = document.getElementById('toggleButtonKata');
 buttonKata.addEventListener('click', () => {
-    // Redirigir a la URL deseada
-    window.location.href = '/kata/inicio/inicio_kata.html';
+    window.location.href = './kata/inicio/inicio_kata.html';
 });
