@@ -71,8 +71,6 @@ const leccion3 = [
     { phoneme: 'ro', hiragana: 'ろ' },
 
     { phoneme: 'wa', hiragana: 'わ' },
-    { phoneme: 'wi', hiragana: 'ゐ' },
-    { phoneme: 'we', hiragana: 'ゑ' },
     { phoneme: 'wo', hiragana: 'を' },
 
     { phoneme: 'n', hiragana: 'ん' },
