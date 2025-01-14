@@ -158,32 +158,23 @@ button#toggleButtonKata {
 /* --------------------------------------- */
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-    .phoneme, .hiragana {
-        font-size: 5em;
+    .navbar ul {
+        flex-wrap: wrap;
     }
 
-    .navbar a {
-        font-size: 1rem;
+    .navbar li {
+        flex: 1 1 calc(25% - 10px); /* Tres elementos en la primera fila */
+        text-align: center;
     }
 
-    .result {
-        font-size: 1.5rem;
+    .navbar li:nth-child(4),
+    .navbar li:nth-child(5) {
+        flex: 1 1 calc(35% - 10px); /* Dos elementos en la segunda fila */
     }
 
-    .wrapper {
-        flex-direction: column;
-    }
-
-    .toggle-button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-    }
-
-    .toggle-button2 {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
+    .navbar ul {
+        gap: 5px;
     }
 }
+
 /* --------------------------------------- */
