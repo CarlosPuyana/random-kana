@@ -1,0 +1,41 @@
+.lectura-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.hiragana-word {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+#userInput {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 300px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#checkButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0078d7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkButton:hover {
+    background-color: #005bb5;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
