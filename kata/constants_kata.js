@@ -1,100 +1,104 @@
 const lecciones = [];
-let v3 = false;
 
-const leccion1 = [
-    { phoneme: 'a', katakana: 'ア' },
-    { phoneme: 'i', katakana: 'イ' },
-    { phoneme: 'u', katakana: 'ウ' },
-    { phoneme: 'e', katakana: 'エ' },
-    { phoneme: 'o', katakana: 'オ' },
+const katakanas = [
+    { katakana: 'ア', phoneme: 'a', level: 1 },
+    { katakana: 'イ', phoneme: 'i', level: 1 },
+    { katakana: 'ウ', phoneme: 'u', level: 1 },
+    { katakana: 'エ', phoneme: 'e', level: 1 },
+    { katakana: 'オ', phoneme: 'o', level: 1 },
+    { katakana: 'カ', phoneme: 'ka', level: 1 },
+    { katakana: 'キ', phoneme: 'ki', level: 1 },
+    { katakana: 'ク', phoneme: 'ku', level: 1 },
+    { katakana: 'ケ', phoneme: 'ke', level: 1 },
+    { katakana: 'コ', phoneme: 'ko', level: 1 },
+    { katakana: 'ガ', phoneme: 'ga', level: 1 },
+    { katakana: 'ギ', phoneme: 'gi', level: 1 },
+    { katakana: 'グ', phoneme: 'gu', level: 1 },
+    { katakana: 'ゲ', phoneme: 'ge', level: 1 },
+    { katakana: 'ゴ', phoneme: 'go', level: 1 },
+    { katakana: 'サ', phoneme: 'sa', level: 1 },
+    { katakana: 'シ', phoneme: 'shi', level: 1 },
+    { katakana: 'ス', phoneme: 'su', level: 1 },
+    { katakana: 'セ', phoneme: 'se', level: 1 },
+    { katakana: 'ソ', phoneme: 'so', level: 1 },
+    { katakana: 'ザ', phoneme: 'za', level: 1 },
+    { katakana: 'ジ', phoneme: 'ji', level: 1 },
+    { katakana: 'ズ', phoneme: 'zu', level: 1 },
+    { katakana: 'ゼ', phoneme: 'ze', level: 1 },
+    { katakana: 'ゾ', phoneme: 'zo', level: 1 },
 
-    { phoneme: 'ka', katakana: 'カ' },
-    { phoneme: 'ki', katakana: 'キ' },
-    { phoneme: 'ku', katakana: 'ク' },
-    { phoneme: 'ke', katakana: 'ケ' },
-    { phoneme: 'ko', katakana: 'コ' },
+    { katakana: 'タ', phoneme: 'ta', level: 2 },
+    { katakana: 'チ', phoneme: 'chi', level: 2 },
+    { katakana: 'ツ', phoneme: 'tsu', level: 2 },
+    { katakana: 'テ', phoneme: 'te', level: 2 },
+    { katakana: 'ト', phoneme: 'to', level: 2 },
+    { katakana: 'ダ', phoneme: 'da', level: 2 },
+    { katakana: 'ヂ', phoneme: 'ji', level: 2 },
+    { katakana: 'ヅ', phoneme: 'zu', level: 2 },
+    { katakana: 'デ', phoneme: 'de', level: 2 },
+    { katakana: 'ド', phoneme: 'do', level: 2 },
+    { katakana: 'ナ', phoneme: 'na', level: 2 },
+    { katakana: 'ニ', phoneme: 'ni', level: 2 },
+    { katakana: 'ヌ', phoneme: 'nu', level: 2 },
+    { katakana: 'ネ', phoneme: 'ne', level: 2 },
+    { katakana: 'ノ', phoneme: 'no', level: 2 },
+    { katakana: 'ハ', phoneme: 'ha', level: 2 },
+    { katakana: 'ヒ', phoneme: 'hi', level: 2 },
+    { katakana: 'フ', phoneme: 'fu', level: 2 },
+    { katakana: 'ヘ', phoneme: 'he', level: 2 },
+    { katakana: 'ホ', phoneme: 'ho', level: 2 },
+    { katakana: 'バ', phoneme: 'ba', level: 2 },
+    { katakana: 'ビ', phoneme: 'bi', level: 2 },
+    { katakana: 'ブ', phoneme: 'bu', level: 2 },
+    { katakana: 'ベ', phoneme: 'be', level: 2 },
+    { katakana: 'ボ', phoneme: 'bo', level: 2 },
+    { katakana: 'パ', phoneme: 'pa', level: 2 },
+    { katakana: 'ピ', phoneme: 'pi', level: 2 },
+    { katakana: 'プ', phoneme: 'pu', level: 2 },
+    { katakana: 'ペ', phoneme: 'pe', level: 2 },
+    { katakana: 'ポ', phoneme: 'po', level: 2 },
 
-    { phoneme: 'ga', katakana: 'ガ' },
-    { phoneme: 'gi', katakana: 'ギ' },
-    { phoneme: 'gu', katakana: 'グ' },
-    { phoneme: 'ge', katakana: 'ゲ' },
-    { phoneme: 'go', katakana: 'ゴ' },
-
-    { phoneme: 'sa', katakana: 'サ' },
-    { phoneme: 'shi', katakana: 'シ' },
-    { phoneme: 'su', katakana: 'ス' },
-    { phoneme: 'se', katakana: 'セ' },
-    { phoneme: 'so', katakana: 'ソ' },
-
-    { phoneme: 'za', katakana: 'ザ' },
-    { phoneme: 'ji', katakana: 'ジ' },
-    { phoneme: 'zu', katakana: 'ズ' },
-    { phoneme: 'ze', katakana: 'ゼ' },
-    { phoneme: 'zo', katakana: 'ゾ' },
+    { katakana: 'マ', phoneme: 'ma', level: 3 },
+    { katakana: 'ミ', phoneme: 'mi', level: 3 },
+    { katakana: 'ム', phoneme: 'mu', level: 3 },
+    { katakana: 'メ', phoneme: 'me', level: 3 },
+    { katakana: 'モ', phoneme: 'mo', level: 3 },
+    { katakana: 'ヤ', phoneme: 'ya', level: 3 },
+    { katakana: 'ユ', phoneme: 'yu', level: 3 },
+    { katakana: 'ヨ', phoneme: 'yo', level: 3 },
+    { katakana: 'ラ', phoneme: 'ra', level: 3 },
+    { katakana: 'リ', phoneme: 'ri', level: 3 },
+    { katakana: 'ル', phoneme: 'ru', level: 3 },
+    { katakana: 'レ', phoneme: 're', level: 3 },
+    { katakana: 'ロ', phoneme: 'ro', level: 3 },
+    { katakana: 'ワ', phoneme: 'wa', level: 3 },
+    { katakana: 'ヲ', phoneme: 'wo', level: 3 },
+    { katakana: 'ン', phoneme: 'n', level: 3 },
 ];
 
-const leccion2 = [
-    { phoneme: 'ta', katakana: 'タ' },
-    { phoneme: 'chi', katakana: 'チ' },
-    { phoneme: 'tsu', katakana: 'ツ' },
-    { phoneme: 'te', katakana: 'テ' },
-    { phoneme: 'to', katakana: 'ト' },
 
-    { phoneme: 'na', katakana: 'ナ' },
-    { phoneme: 'ni', katakana: 'ニ' },
-    { phoneme: 'nu', katakana: 'ヌ' },
-    { phoneme: 'ne', katakana: 'ネ' },
-    { phoneme: 'no', katakana: 'ノ' },
-
-    { phoneme: 'ha', katakana: 'ハ' },
-    { phoneme: 'hi', katakana: 'ヒ' },
-    { phoneme: 'fu', katakana: 'フ' },
-    { phoneme: 'he', katakana: 'ヘ' },
-    { phoneme: 'ho', katakana: 'ホ' },
-];
-
-const leccion3 = [
-    { phoneme: 'ma', katakana: 'マ' },
-    { phoneme: 'mi', katakana: 'ミ' },
-    { phoneme: 'mu', katakana: 'ム' },
-    { phoneme: 'me', katakana: 'メ' },
-    { phoneme: 'mo', katakana: 'モ' },
-
-    { phoneme: 'ya', katakana: 'ヤ' },
-    { phoneme: 'yu', katakana: 'ユ' },
-    { phoneme: 'yo', katakana: 'ヨ' },
-
-    { phoneme: 'ra', katakana: 'ラ' },
-    { phoneme: 'ri', katakana: 'リ' },
-    { phoneme: 'ru', katakana: 'ル' },
-    { phoneme: 're', katakana: 'レ' },
-    { phoneme: 'ro', katakana: 'ロ' },
-
-    { phoneme: 'wa', katakana: 'ワ' },
-    { phoneme: 'wi', katakana: 'ヰ' },
-    { phoneme: 'we', katakana: 'ヱ' },
-    { phoneme: 'wo', katakana: 'ヲ' },
-
-    { phoneme: 'n', katakana: 'ン' },
-];
-
-function updateLecciones(leccion) {
+function updateLecciones(leccionClicked) {
     lecciones.length = 0;
-    switch (leccion) {
+    let leccion = [];
+    switch (leccionClicked) {
         case 'L1':
-            lecciones.push(...leccion1);
+            leccion = katakanas.filter(katakanas => katakanas.level === 1);
+            lecciones.push(...leccion);
             break;
         case 'L2':
-            lecciones.push(...leccion2);
+            leccion = katakanas.filter(katakana => katakana.level === 2);
+            lecciones.push(...leccion);
             break;
         case 'L3':
-            lecciones.push(...leccion3);
+            leccion = katakanas.filter(katakana => katakana.level === 3);
+            lecciones.push(...leccion);
             break;
         case 'ALL':
-            lecciones.push(...leccion1, ...leccion2, ...leccion3);
+            lecciones.push(...katakanas);
             break;
         default:
-            lecciones.push(...leccion1); // Cargar leccion1 por defecto
+            leccion = katakanas.filter(katakana => katakana.level === 1);
+            lecciones.push(leccion); // Cargar level 1 por defecto
             break;
     }
     console.log(lecciones);
@@ -104,8 +108,6 @@ document.querySelector('.button-container').addEventListener('click', (event) =>
     if (event.target.classList.contains('class-button')) {
         const buttonText = event.target.textContent;
         updateLecciones(buttonText);
-
-        if (v3) nuevoDesafio();
     }
 });
 
