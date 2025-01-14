@@ -104,14 +104,6 @@ let currentWordIndex = -1;
 // Crear tooltip dinámico
 const tooltip = document.createElement('div');
 tooltip.classList.add('tooltip');
-tooltip.style.position = 'absolute';
-tooltip.style.display = 'none';
-tooltip.style.backgroundColor = '#333';
-tooltip.style.color = '#fff';
-tooltip.style.padding = '5px 10px';
-tooltip.style.borderRadius = '5px';
-tooltip.style.fontSize = '0.9rem';
-tooltip.style.pointerEvents = 'none';
 document.body.appendChild(tooltip);
 
 // Función para mostrar una palabra aleatoria
