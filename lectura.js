@@ -98,7 +98,21 @@ const palabrasHiraganas = [
     { hiragana: 'れいぞうこ', lectura: 'reizouko', significado: 'refrigerador' },
     { hiragana: 'わたし', lectura: 'watashi', significado: 'yo' },
 ];
+
 let currentWordIndex = -1;
+
+// Crear tooltip dinámico
+const tooltip = document.createElement('div');
+tooltip.classList.add('tooltip');
+tooltip.style.position = 'absolute';
+tooltip.style.display = 'none';
+tooltip.style.backgroundColor = '#333';
+tooltip.style.color = '#fff';
+tooltip.style.padding = '5px 10px';
+tooltip.style.borderRadius = '5px';
+tooltip.style.fontSize = '0.9rem';
+tooltip.style.pointerEvents = 'none';
+document.body.appendChild(tooltip);
 
 // Función para mostrar una palabra aleatoria
 function mostrarPalabra() {
@@ -108,12 +122,47 @@ function mostrarPalabra() {
     } while (newIndex === currentWordIndex);
 
     currentWordIndex = newIndex;
-    hiraganaWord.textContent = palabrasHiraganas[currentWordIndex].hiragana;
-    significadoDisplay.textContent = palabrasHiraganas[currentWordIndex].significado;
+    const { hiragana, significado } = palabrasHiraganas[currentWordIndex];
+
+    hiraganaWord.textContent = ''; // Limpiar palabra anterior
+    significadoDisplay.textContent = significado;
+
+    // Dividir el Hiragana en caracteres individuales
+    [...hiragana].forEach((char) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.cursor = 'pointer';
+
+        // Buscar el fonema correspondiente
+        const hiraganaData = hiraganas.find((h) => h.hiragana === char);
+        if (hiraganaData) {
+            const phoneme = hiraganaData.phoneme;
+
+            // Añadir eventos para mostrar el tooltip
+            span.addEventListener('mouseenter', (event) => showTooltip(event, phoneme));
+            span.addEventListener('mouseleave', hideTooltip);
+        }
+
+        hiraganaWord.appendChild(span);
+    });
 }
 
+
+// Mostrar el tooltip
+function showTooltip(event, text) {
+    tooltip.textContent = text;
+    tooltip.style.left = `${event.pageX + 10}px`;
+    tooltip.style.top = `${event.pageY + 10}px`;
+    tooltip.style.display = 'block';
+}
+
+function hideTooltip() {
+    tooltip.style.display = 'none';
+}
+
+
 // Evento para comprobar la lectura ingresada
-checkButton.addEventListener('click', () => {
+function comprobarRespuesta() {
     const userAnswer = userInput.value.trim().toLowerCase();
     const correctAnswer = palabrasHiraganas[currentWordIndex].lectura;
 
@@ -125,6 +174,15 @@ checkButton.addEventListener('click', () => {
     } else {
         feedback.textContent = 'Incorrecto. Inténtalo de nuevo.';
         feedback.style.color = 'red';
+    }
+}
+
+checkButton.addEventListener('click', comprobarRespuesta);
+
+// Evento para el teclado (Enter como Comprobar)
+userInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        comprobarRespuesta();
     }
 });
 
