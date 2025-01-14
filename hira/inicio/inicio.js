@@ -3,12 +3,11 @@ const containerElement = document.getElementById('container');
 const phonemeElement = document.getElementById('phoneme');
 const hiraganaElement = document.getElementById('hiragana');
 const toggleButton = document.getElementById('toggleButton');
-v3 = false;
 
 let showPhoneme = true;
 let currentPair = getRandomHiragana();
-phonemeElement.textContent = currentPair.phoneme;
-hiraganaElement.style.display = 'none';
+hiraganaElement.textContent = currentPair.hiragana;
+phonemeElement.style.display = 'none';
 
 function getRandomHiragana() {
     const randomIndex = Math.floor(Math.random() * lecciones.length);
@@ -18,17 +17,17 @@ function getRandomHiragana() {
 toggleButton.addEventListener('click', () => {
     showPhoneme = !showPhoneme;
     currentPair = getRandomHiragana();
-    phonemeElement.textContent = showPhoneme ? currentPair.phoneme : currentPair.hiragana;
-    hiraganaElement.style.display = 'none';
+    hiraganaElement.textContent = showPhoneme ? currentPair.hiragana : currentPair.phoneme;
+    phonemeElement.style.display = 'none';
 });
 
 container.addEventListener('click', () => {
-    if (hiraganaElement.style.display === 'none') {
-        hiraganaElement.textContent = showPhoneme ? currentPair.hiragana : currentPair.phoneme;
-        hiraganaElement.style.display = 'block';
+    if (phonemeElement.style.display === 'none') {
+        phonemeElement.textContent = showPhoneme ? currentPair.phoneme : currentPair.hiragana;
+        phonemeElement.style.display = 'block';
     } else {
         currentPair = getRandomHiragana();
-        phonemeElement.textContent = showPhoneme ? currentPair.phoneme : currentPair.hiragana;
-        hiraganaElement.style.display = 'none';
+        hiraganaElement.textContent = showPhoneme ? currentPair.hiragana : currentPair.phoneme;
+        phonemeElement.style.display = 'none';
     }
 });
