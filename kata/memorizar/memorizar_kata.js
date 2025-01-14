@@ -7,8 +7,6 @@ const repetirButtonV2 = document.getElementById('repetirButton');
 const errorElement = document.getElementById('error');
 const aciertoElement = document.getElementById('acierto');
 
-v3 = false;
-
 let showPhonemeV2 = true;
 let currentPairV2 = getRandomKatakana();
 let errores = 0;
@@ -20,8 +18,8 @@ function calcOffset(offset) {
     return offset * 2 * 0.5;
 }
 
-phonemeElementV2.textContent = currentPairV2.phoneme;
-katakanaElementV2.style.display = 'none';
+katakanaElementV2.textContent = currentPairV2.katakana;
+phonemeElementV2.style.display = 'none';;
 
 function getRandomKatakana() {
     const randomIndex = Math.floor(Math.random() * lecciones.length);
@@ -31,8 +29,8 @@ function getRandomKatakana() {
 toggleButtonV2.addEventListener('click', () => {
     showPhonemeV2 = !showPhonemeV2;
     currentPairV2 = getRandomKatakana();
-    phonemeElementV2.textContent = showPhonemeV2 ? currentPairV2.phoneme : currentPairV2.katakana;
-    katakanaElementV2.style.display = 'none';
+    katakanaElementV2.textContent = showPhonemeV2 ? currentPairV2.katakana : currentPairV2.phoneme;
+    phonemeElementV2.style.display = 'none';
 });
 
 repetirButtonV2.addEventListener('click', () => {
@@ -54,14 +52,14 @@ containerElementV2.addEventListener('click', () => {
 });
 
 function siguiente(si = false) {
-    if (katakanaElementV2.style.display === 'none' && !si) {
-        katakanaElementV2.textContent = showPhonemeV2 ? currentPairV2.katakana : currentPairV2.phoneme;
-        katakanaElementV2.style.display = 'block';
+    if (phonemeElementV2.style.display === 'none' && !si) {
+        phonemeElementV2.textContent = showPhonemeV2 ? currentPairV2.phoneme : currentPairV2.katakana;
+        phonemeElementV2.style.display = 'block';
         enableDraggable(true);
     } else {
         currentPairV2 = getRandomKatakana();
-        phonemeElementV2.textContent = showPhonemeV2 ? currentPairV2.phoneme : currentPairV2.katakana;
-        katakanaElementV2.style.display = 'none';
+        katakanaElementV2.textContent = showPhonemeV2 ? currentPairV2.katakana : currentPairV2.phoneme;
+        phonemeElementV2.style.display = 'none';
         enableDraggable(false);
     }
 }
