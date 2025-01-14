@@ -110,10 +110,13 @@ function mostrarPalabra() {
     currentWordIndex = newIndex;
     hiraganaWord.textContent = palabrasHiraganas[currentWordIndex].hiragana;
     significadoDisplay.textContent = palabrasHiraganas[currentWordIndex].significado;
+
+    // Añadir Tooltip al Hiragana
+    hiraganaWord.setAttribute('title', palabrasHiraganas[currentWordIndex].lectura);
 }
 
 // Evento para comprobar la lectura ingresada
-checkButton.addEventListener('click', () => {
+function comprobarRespuesta() {
     const userAnswer = userInput.value.trim().toLowerCase();
     const correctAnswer = palabrasHiraganas[currentWordIndex].lectura;
 
@@ -125,6 +128,15 @@ checkButton.addEventListener('click', () => {
     } else {
         feedback.textContent = 'Incorrecto. Inténtalo de nuevo.';
         feedback.style.color = 'red';
+    }
+}
+
+checkButton.addEventListener('click', comprobarRespuesta);
+
+// Evento para el teclado (Enter como Comprobar)
+userInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        comprobarRespuesta();
     }
 });
 
