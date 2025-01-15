@@ -55,3 +55,16 @@
     width: 90%;
     max-width: 150px;
 }
+
+@media (max-width: 768px) {
+    .phoneme, .hiragana {
+        font-size: 5em !important;
+    }
+    .result {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+}
