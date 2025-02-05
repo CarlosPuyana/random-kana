@@ -78,40 +78,66 @@ const hiraganas = [
 
 
 function updateLecciones(leccionClicked) {
-    lecciones.length = 0;
-    let leccion = [];
-    switch (leccionClicked) {
-        case 'L1':
-            leccion = hiraganas.filter(hiragana => hiragana.level === 1);
+    const button = document.querySelector(`.class-button[data-level='${leccionClicked}']`);
+    if (leccionClicked === 'ALL') {
+        // Si ya están todas las lecciones activas, vaciarlas
+        if (lecciones.length === hiraganas.length) {
+            lecciones.length = 0;
+            resetButtonStyles();
+            document.querySelector(".class-button[data-level='L1']").classList.add("active");
+            updateLecciones('L1');
+        } else {
+            lecciones.length = 0;
+            lecciones.push(...katakanas);
+            resetButtonStyles();
+            button.classList.add("active");
+        }
+    } else {
+        let leccion = hiraganas.filter(hiragana => hiragana.level === parseInt(leccionClicked.replace('L', '')));
+        
+        // Verificar si las lecciones ya están en la lista
+        if (lecciones.some(k => leccion.includes(k))) {
+            lecciones.splice(0, lecciones.length, ...lecciones.filter(k => !leccion.includes(k)));
+            button.classList.remove("active");
+        } else {
             lecciones.push(...leccion);
-            break;
-        case 'L2':
-            leccion = hiraganas.filter(hiragana => hiragana.level === 2);
-            lecciones.push(...leccion);
-            break;
-        case 'L3':
-            leccion = hiraganas.filter(hiragana => hiragana.level === 3);
-            lecciones.push(...leccion);
-            break;
-        case 'ALL':
-            lecciones.push(...hiraganas);
-            break;
-        default:
-            leccion = hiraganas.filter(hiragana => hiragana.level === 1);
-            lecciones.push(leccion); // Cargar level 1 por defecto
-            break;
+            button.classList.add("active");
+        }
     }
+
+    // Si no hay lecciones, activar L1 por defecto
+    if (lecciones.length === 0) {
+        updateLecciones('L1');
+    }
+    
+    // Si están activados L1, L2 y L3, activar ALL y desactivar los demás
+    const l1Active = document.querySelector(".class-button[data-level='L1']").classList.contains("active");
+    const l2Active = document.querySelector(".class-button[data-level='L2']").classList.contains("active");
+    const l3Active = document.querySelector(".class-button[data-level='L3']").classList.contains("active");
+    if (l1Active && l2Active && l3Active) {
+        resetButtonStyles();
+        document.querySelector(".class-button[data-level='ALL']").classList.add("active");
+        lecciones.length = 0;
+        lecciones.push(...hiraganas);
+    }
+    
     console.log(lecciones);
+}
+
+function resetButtonStyles() {
+    document.querySelectorAll('.class-button').forEach(button => {
+        button.classList.remove("active");
+    });
 }
 
 document.querySelector('.button-container').addEventListener('click', (event) => {
     if (event.target.classList.contains('class-button')) {
         const buttonText = event.target.textContent;
         updateLecciones(buttonText);
-
     }
-});
+});;
 
+document.querySelector(".class-button[data-level='L1']").classList.add("active");
 updateLecciones('L1');
 
 const buttonKata = document.getElementById('toggleButtonKata');

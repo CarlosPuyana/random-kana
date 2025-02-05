@@ -155,6 +155,11 @@ button#toggleButtonKata {
 .class-button:hover {
     background-color: #005bb5;
 }
+
+.class-button.active {
+    background-color: #444;
+    color: white;
+}
 /* --------------------------------------- */
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
