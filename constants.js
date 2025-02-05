@@ -88,7 +88,7 @@ function updateLecciones(leccionClicked) {
             updateLecciones('L1');
         } else {
             lecciones.length = 0;
-            lecciones.push(...katakanas);
+            lecciones.push(...hiraganas);
             resetButtonStyles();
             button.classList.add("active");
         }
