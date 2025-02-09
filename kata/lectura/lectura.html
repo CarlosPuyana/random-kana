@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura katakana</title>
+    <link rel="stylesheet" href="lectura.css">
+    <link rel="stylesheet" href="../comun_kata.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../inicio/inicio_kata.html" id="navInicio">Inicio</a></li>
+            <li><a href="../memorizar/memorizar_kata.html" id="navV2">Memorizar</a></li>
+            <li><a href="../dibujar/draw_kata.html" id="navDraw">Dibujar</a></li>
+            <li><a href="../opciones/options_kata.html" id="navDraw">Opciones</a></li>
+            <li><a href="lectura.html">Lectura</a></li>
+        </ul>
+    </nav>
+    <div class="lectura-container">
+        <div class="katakana-word" id="katakanaWord">こんにちは</div>
+        <input type="text" id="userInput" placeholder="Escribe la lectura en fonemas">
+        <button id="checkButton">Comprobar</button>
+        <div class="feedback" id="feedback"></div>
+    </div>
+
+    <script src="../constants_kata.js"></script>
+    <script src="../katakanas.js"></script>
+    <script src="lectura.js"></script>
+</body>
+</html>
