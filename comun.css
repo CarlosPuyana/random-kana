@@ -121,6 +121,53 @@ button#toggleButtonKata {
     transform: scale(0.95);
 }
 
+button#toggleButtonHira {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #961139;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button#toggleButtonVocab {
+    position: absolute;
+    bottom: 170px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #961139;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-button-vocab:hover {
+    background-color: #961139;
+    transform: scale(1.1);
+}
+
+.toggle-button-vocab:active {
+    transform: scale(0.95);
+}
+
 /* --------------------------------------- */
 /* Botón cambiar nivel */
 
