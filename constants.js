@@ -145,3 +145,9 @@ buttonKata.addEventListener('click', () => {
     const basePath = window.location.pathname.includes('/random-kana') ? '/random-kana' : '';
     window.location.href = `${basePath}/kata/inicio/inicio_kata.html`;
 });
+
+const buttonVocab = document.getElementById('toggleButtonVocab');
+buttonVocab.addEventListener('click', () => {
+    const basePath = window.location.pathname.includes('/random-kana') ? '/random-kana' : '';
+    window.location.href = `${basePath}/vocab/inicio/vocab.html`;
+});
