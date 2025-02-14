@@ -90,7 +90,7 @@ const front = flashcard.querySelector(".front");
 const back = flashcard.querySelector(".back");
 const backButton = document.getElementById("backButton");
 const nextButton = document.getElementById("nextButton");
-const prevButton = document.getElementById("prevButton"); // Nuevo botón
+const prevButton = document.getElementById("prevButton");
 
 // Función para actualizar la flashcard
 function updateFlashcard() {

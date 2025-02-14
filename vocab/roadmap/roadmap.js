@@ -17,9 +17,11 @@ sections.forEach(section => {
     const sectionDiv = document.createElement("div");
     sectionDiv.className = "section";
     sectionDiv.innerHTML = `
-        <h1>${section.emoji}</h1>
-        <h2 class="toggle-section">${section.name}</h2>
-        <p class="xp-required">${section.xp} XP para desbloquear</p>
+        <div class="toggle-section">
+            <h1>${section.emoji}</h1>
+            <h2>${section.name}</h2>
+            <p class="xp-required">${section.xp} XP para desbloquear</p>
+        </div>
         <div class="sub-section hidden">
             ${subSections.map(sub => `
                 <div onclick="openSubSection('${section.name}', '${sub.folder}')">
@@ -35,11 +37,11 @@ sections.forEach(section => {
 // 🔽 Evento para mostrar/ocultar subsecciones
 document.querySelectorAll(".toggle-section").forEach(header => {
     header.addEventListener("click", function() {
-        this.nextElementSibling.nextElementSibling.classList.toggle("hidden");
+        this.nextElementSibling.classList.toggle("hidden");
     });
 });
 
 function openSubSection(sectionName, folder) {
     localStorage.setItem("selectedSection", sectionName);
-    window.location.href = `${folder}/${folder}.html`; // Dirige al archivo correcto dentro de su carpeta
+    window.location.href = `${folder}/${folder}.html`;
 }

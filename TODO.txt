@@ -1,0 +1,31 @@
+### 1. **Ejercicios de Traducción**
+   - **Frases en Hiragana**: Presenta frases simples en hiragana y pide a los usuarios que las traduzcan al español. Esto ayudará a reforzar la comprensión del vocabulario en contexto.
+   - **Traducción Inversa**: Muestra una frase en español y pide a los usuarios que la traduzcan al japonés, utilizando el vocabulario que han aprendido.
+
+### 2. **Completar la Frase**
+   - **Opciones Múltiples**: Presenta una frase en hiragana con una palabra faltante y ofrece varias opciones de palabras para que el usuario elija la correcta. Esto ayudará a los estudiantes a practicar la gramática y el uso del vocabulario en contexto.
+   - **Arrastrar y Soltar**: Permite a los usuarios arrastrar palabras desde un conjunto de opciones para completar la frase correctamente.
+
+### 3. **Construcción de Frases**
+   - **Ordenar Palabras**: Proporciona un conjunto de palabras en desorden y pide a los usuarios que las coloquen en el orden correcto para formar una frase coherente.
+   - **Frases de Ejemplo**: Muestra una frase en hiragana y pide a los usuarios que identifiquen el sujeto, verbo y objeto, ayudándoles a entender la estructura de las oraciones en japonés.
+
+### 4. **Ejercicios de Gramática**
+   - **Partículas**: Crea ejercicios donde los usuarios deban elegir la partícula correcta (como は, が, を) para completar las frases. Esto es fundamental para la gramática japonesa.
+   - **Conjugación de Verbos**: Introduce ejercicios donde los usuarios deban conjugar verbos en diferentes tiempos (presente, pasado, negativo) usando el vocabulario que han aprendido.
+
+### 5. **Diálogos Interactivos**
+   - **Role-Playing**: Crea diálogos interactivos donde los usuarios pueden elegir diferentes respuestas en una conversación. Esto les ayudará a practicar el uso del vocabulario en situaciones cotidianas.
+   - **Escenarios de la Vida Real**: Presenta situaciones comunes (como ir de compras o hacer una presentación) y permite a los usuarios practicar frases y vocabulario relevantes.
+
+### 6. **Juegos de Gramática**
+   - **Crucigramas y Sopa de Letras**: Crea juegos que incluyan vocabulario y gramática, como crucigramas donde las pistas son definiciones o ejemplos de uso.
+   - **Juego de Memoria**: Usa tarjetas con frases en hiragana y su traducción, donde los usuarios deben emparejar las tarjetas correctas.
+
+### 7. **Pruebas de Comprensión**
+   - **Preguntas de Comprensión**: Después de presentar un texto corto en hiragana, haz preguntas sobre el contenido para evaluar la comprensión del usuario.
+   - **Respuestas Abiertas**: Permite a los usuarios escribir sus propias respuestas a preguntas sobre el texto, fomentando la producción escrita.
+
+### 8. **Feedback y Revisión**
+   - **Corrección Automática**: Proporciona retroalimentación instantánea sobre las respuestas de los usuarios, explicando por qué una respuesta es correcta o incorrecta.
+   - **Revisión de Errores**: Ofrece un resumen de los errores cometidos en ejercicios anteriores, permitiendo a los usuarios revisar y aprender de ellos.
