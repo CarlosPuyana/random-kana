@@ -54,7 +54,41 @@ const vocabulary = {
         { word: "しち", romaji: "Shichi", meaning: "Siete" },
         { word: "はち", romaji: "Hachi", meaning: "Ocho" },
         { word: "きゅう", romaji: "Kyuu", meaning: "Nueve" },
-        { word: "じゅう", romaji: "Juu", meaning: "Diez" }
+        { word: "じゅう", romaji: "Juu", meaning: "Diez" },
+
+        { word: "ななじゅう", romaji: "nanajuu", meaning: "Diecisiete" },
+        { word: "にじゅう", romaji: "nijuu", meaning: "Veinte" },
+        { word: "にじゅう よん", romaji: "nijuu yon", meaning: "Veinticuatro" },
+        { word: "ななじゅう はち", romaji: "nanajuu hachi", meaning: "Setenta y 8" },
+
+        { word: "ひゃく", romaji: "hyaku", meaning: "100" },
+        { word: "きゅう", romaji: "hyaku", meaning: "200" },
+        { word: "さんびゃく", romaji: "sanbyaku", meaning: "300" },
+        { word: "ろっぴゃく", romaji: "roppyaku", meaning: "600" },
+        { word: "はっぴゃく", romaji: "happyaku", meaning: "800" },
+        { word: "きゅうひゃく", romaji: "kyuuhyaku", meaning: "900" },
+        { word: "ななひゃく", romaji: "nanahyaku", meaning: "701" },
+        { word: "きゅうひゃく きゅうじゅう きょう", romaji: "kyuuhyaku kyuujuu kyou", meaning: "999" },
+
+        { word: "せん", romaji: "sen", meaning: "1000" },
+        { word: "さんぜん", romaji: "sanzen", meaning: "3000" },
+        { word: "ななせん", romaji: "nanasen", meaning: "7000" },
+        { word: "はっせん", romaji: "hassen", meaning: "8000" },
+        { word: "きゅうせん よんひゃく ななじゅう ろく", romaji: "Kyuusen yonhyaku nanajuu roku", meaning: "9,486" },
+        { word: "はっせん ひゃく さんじゅう よん", romaji: "hassen hyaku sanjuu yon", meaning: "8,134" },
+
+        { word: "いちまん", romaji: "ichiman", meaning: "10,000" },
+        { word: "さんまん", romaji: "sanman", meaning: "30,000" },
+        { word: "ごまん", romaji: "goman", meaning: "50,000" },
+        { word: "きゅうまん", romaji: "Kyuuman", meaning: "90,000" },
+
+        { word: "じゅうまん", romaji: "juuman", meaning: "100,000" },
+        { word: "さんじゅう ごまん", romaji: "sanjuu goman", meaning: "350,000" },
+        { word: "よんじゅう さんまん にせん ひゃく にじゅう", romaji: "yonjuu sanman nisen hyaku nijuu", meaning: "432,120" },
+        { word: "はっぴゃく じゅう よんまん ろくせん ななひゃく ななじゅう はち", romaji: "happyaku juu yonman rokusen nanahyaku nanajuu hachi", meaning: "8,146,778" },
+        { word: "きゅう", romaji: "yonjuu niman hassen gohyaku kyuujuu nana", meaning: "428,597" },
+        { word: "きゅう", romaji: "nanahyaku gojuu niman kyuusen hyaku nanajuu", meaning: "7,529,170" },
+
     ],
     "Profesiones": [
         { word: "せんせい", romaji: "Sensei", meaning: "Profesor/a" },
