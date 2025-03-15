@@ -133,12 +133,24 @@ function updateFlashcard() {
         back.innerHTML = "";
         return;
     }
-    front.textContent = words[currentIndex].word;
-    back.innerHTML = `
+    const number = Math.floor(Math.random() * 2) + 1;
+
+    if (number % 2 === 0) {
+        front.textContent = words[currentIndex].meaning;
+        back.innerHTML = `
         <p class="romaji">${words[currentIndex].romaji}</p>
         <p class="meaning">${words[currentIndex].meaning}</p>
         <p class="word">${words[currentIndex].word}</p>
     `;
+    } else {
+        front.textContent = words[currentIndex].word;
+        back.innerHTML = `
+        <p class="romaji">${words[currentIndex].romaji}</p>
+        <p class="meaning">${words[currentIndex].meaning}</p>
+        <p class="word">${words[currentIndex].word}</p>
+    `;
+    }
+
 }
 
 // Girar la tarjeta al hacer clic
