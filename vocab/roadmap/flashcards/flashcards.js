@@ -67,14 +67,14 @@ const vocabulary = {
         { word: "ろっぴゃく", romaji: "roppyaku", meaning: "600" },
         { word: "はっぴゃく", romaji: "happyaku", meaning: "800" },
         { word: "きゅうひゃく", romaji: "kyuuhyaku", meaning: "900" },
-        { word: "ななひゃく", romaji: "nanahyaku", meaning: "701" },
+        { word: "ななひゃく", romaji: "nanahyaku ichi", meaning: "701" },
         { word: "きゅうひゃく きゅうじゅう きょう", romaji: "kyuuhyaku kyuujuu kyou", meaning: "999" },
 
         { word: "せん", romaji: "sen", meaning: "1000" },
         { word: "さんぜん", romaji: "sanzen", meaning: "3000" },
         { word: "ななせん", romaji: "nanasen", meaning: "7000" },
         { word: "はっせん", romaji: "hassen", meaning: "8000" },
-        { word: "きゅうせん よんひゃく ななじゅう ろく", romaji: "Kyuusen yonhyaku nanajuu roku", meaning: "9,486" },
+        { word: "きゅうせん よんひゃく はちじゅう ろく", romaji: "Kyuusen yonhyaku hachijuu roku", meaning: "9,486" },
         { word: "はっせん ひゃく さんじゅう よん", romaji: "hassen hyaku sanjuu yon", meaning: "8,134" },
 
         { word: "いちまん", romaji: "ichiman", meaning: "10,000" },
