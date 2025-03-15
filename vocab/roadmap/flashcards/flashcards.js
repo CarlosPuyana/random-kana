@@ -62,7 +62,7 @@ const vocabulary = {
         { word: "ななじゅう はち", romaji: "nanajuu hachi", meaning: "Setenta y 8" },
 
         { word: "ひゃく", romaji: "hyaku", meaning: "100" },
-        { word: "きゅう", romaji: "hyaku", meaning: "200" },
+        { word: "にひゃく", romaji: "nihyaku", meaning: "200" },
         { word: "さんびゃく", romaji: "sanbyaku", meaning: "300" },
         { word: "ろっぴゃく", romaji: "roppyaku", meaning: "600" },
         { word: "はっぴゃく", romaji: "happyaku", meaning: "800" },
