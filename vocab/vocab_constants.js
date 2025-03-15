@@ -46,7 +46,25 @@ const vocab = [
     { japo: 'はり', phoneme: 'hari', espanol: 'aguja' }, { japo: 'やきとり', phoneme: 'yakitori', espanol: 'pollo asado' },
     { japo: 'よろこぶ', phoneme: 'yorokobu', espanol: 'alegrarse' }, { japo: 'わるい', phoneme: 'warui', espanol: 'malo' },
     { japo: 'へいわ', phoneme: 'heiwa', espanol: 'paz' }, { japo: 'かん', phoneme: 'kan', espanol: 'lata' },
-    { japo: 'びん', phoneme: 'bin', espanol: 'botella' }, { japo: 'としをとる', phoneme: 'toshiwotoru', espanol: 'envejecer' }
+    { japo: 'びん', phoneme: 'bin', espanol: 'botella' }, { japo: 'としをとる', phoneme: 'toshiwotoru', espanol: 'envejecer' },
+    { japo: 'きょうしつ', phoneme: 'kyoushitsu', espanol: 'aula'}, { japo: 'しょくどう', phoneme: 'shokudou', espanol: 'comedor'}, 
+    { japo: 'じむしょ', phoneme: 'jimusho', espanol: 'oficina'}, { japo: 'かいぎしつ', phoneme: 'kaigishitsu', espanol: 'sala de reuniones'}, 
+    { japo: 'うけつけ', phoneme: 'uketsuke', espanol: 'recepción'}, { japo: 'へや', phoneme: 'heya', espanol: 'habitación'},
+    { japo: 'おてあらい', phoneme: 'otearai', espanol: 'baño'}, { japo: 'かいだん', phoneme: 'kaidan', espanol: 'escalera'},
+    { japo: 'でんわ', phoneme: 'denwa', espanol: 'telefono'}, { japo: 'くつ', phoneme: 'kutsu', espanol: 'zapatos'},
+    { japo: 'くつした', phoneme: 'kutsushita', espanol: 'calcetines'}, { japo: 'たばこ', phoneme: 'tabako', espanol: 'tabaco'},
+    { japo: 'うりば', phoneme: 'uriba', espanol: 'seccion'},
+    { japo: 'ひゃく', phoneme: 'hyaku', espanol: 'cien'}, { japo: 'にひゃく', phoneme: 'nihyaku', espanol: 'dos cientos'},
+    { japo: 'さんびゃく', phoneme: 'sanbyaku', espanol: 'tres cientos'}, { japo: 'ろっぴゃく', phoneme: 'roppyaku', espanol: 'seis cientos'},
+    { japo: 'はっぴゃく', phoneme: 'happyaku', espanol: '800'}, { japo: 'せん', phoneme: 'sen', espanol: '1000'},
+    { japo: 'にせん', phoneme: 'nisen', espanol: '2000'}, { japo: 'さんぜん', phoneme: 'sanzen', espanol: '3000'},
+    { japo: 'はっせん', phoneme: 'hassen', espanol: '8000'}, { japo: 'きゅうせん', phoneme: 'kyuusen', espanol: '9000'},
+
+    { japo: 'いちまん', phoneme: 'ichiman', espanol: '10.000'}, { japo: 'にまん', phoneme: 'niman', espanol: '20.000'},
+    { japo: 'はちまん', phoneme: 'hachiman', espanol: '80.000'}, { japo: 'じゅうまん', phoneme: 'juuman', espanol: '100.000'},
+
+    { japo: 'ろっぴゃくろくじゅうななまん せん はっぴゃく よんじゅう よん', phoneme: 'roppyakurokujuunanaman sen happyaku yonjuu yon', espanol: '6,671,844'},
+    { japo: 'いちまん きゅうせん さんびゃく', phoneme: 'ichiman kyuusen sanbyaku', espanol: '19,300'},
 ];
 
 const buttonKata = document.getElementById('toggleButtonKata');
