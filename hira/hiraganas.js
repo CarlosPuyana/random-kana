@@ -166,5 +166,53 @@ const palabrasHiraganaV2 = [
     { hiragana: 'やま', lectura: 'yama', significado: 'montaña' }
 ];
 
-const palabrasHiraganas = [...palabrasHiraganasV1, ...palabrasHiraganaV2];
+const palabrasHiraganasV3 = [
+    { hiragana: 'やすみ', lectura: 'yasumi', significado: 'descanso' },
+    { hiragana: 'しけん', lectura: 'shiken', significado: 'examen' },
+    { hiragana: 'びしゅつかん', lectura: 'bishutsukan', significado: 'museo de arte' },
+    { hiragana: 'いる', lectura: 'iru', significado: 'tarde' },
+    { hiragana: 'えいがかん', lectura: 'eigakan', significado: 'cine' },
+
+    { hiragana: 'きょう', lectura: 'kyou', significado: 'hoy' },
+    { hiragana: 'あした', lectura: 'ashita', significado: 'mañana' },
+    { hiragana: 'きのう', lectura: 'kinou', significado: 'ayer' },
+    { hiragana: 'あさって', lectura: 'asatte', significado: 'pasado mañana' },
+    { hiragana: 'おととい', lectura: 'ototoi', significado: 'anteayer' },
+
+    { hiragana: 'なんじょうびですか', lectura: 'nanjoubi desuka', significado: '¿qué día es?' },
+    { hiragana: 'きょうはなんじょうびですか', lectura: 'kyou wa nanjoubi desuka', significado: '¿qué día es hoy?' },
+    { hiragana: 'じゅぎょう', lectura: 'jugyou', significado: 'clase' },
+
+    { hiragana: 'おきます', lectura: 'okimasu', significado: 'despertar' },
+    { hiragana: 'ねます', lectura: 'nemasu', significado: 'ir a dormir' },
+    { hiragana: 'はたらきます', lectura: 'hatarakimasu', significado: 'trabajar' },
+    { hiragana: 'やすみます', lectura: 'yasumimasu', significado: 'descansar' },
+    { hiragana: 'べんきょうします', lectura: 'benkyoushimasu', significado: 'estudiar' },
+    { hiragana: 'おわります', lectura: 'owarimasu', significado: 'terminar' },
+
+    { hiragana: 'いまなんじですか', lectura: 'ima nanji desuka', significado: '¿qué hora es?' },
+    { hiragana: 'ごぜんろくじよんじゅうごふん', lectura: 'gozen rokuji yonjuugofun', significado: '06:45' },
+    { hiragana: 'カナダはなんじですか。', lectura: 'kanada wa nanji desuka', significado: '¿qué hora es en canadá' },
+
+    { hiragana: 'げつようび', lectura: 'getsuyoubi', significado: 'lunes' },
+    { hiragana: 'かようび', lectura: 'kayoubi', significado: 'martes' },
+    { hiragana: 'すいようび', lectura: 'suiyoubi', significado: 'miércoles' },
+    { hiragana: 'もくようび', lectura: 'mokuyoubi', significado: 'jueves' },
+    { hiragana: 'きんようび', lectura: 'kinyoubi', significado: 'viernes' },
+    { hiragana: 'どようび', lectura: 'doyoubi', significado: 'sábado' },
+    { hiragana: 'にちようび', lectura: 'nichiyoubi', significado: 'domingo' },
+
+    { hiragana: 'やすみはどようびとにちようびです。', lectura: 'yasumi wa doyoubi to nichiyoubi desu', significado: 'descanso los sábados y domingos' },
+    { hiragana: 'しあいはげつようびです。', lectura: 'shiai wa getsuyoubi desu', significado: 'el partido es el lunes' },
+    { hiragana: 'テストはもくようびです。', lectura: 'tesuto wa mokuyoubi desu', significado: 'el examen es el jueves' },
+    { hiragana: 'えいがはきんようびです。', lectura: 'mijikai', significado: 'película es el viernes' },
+
+    { hiragana: 'かいぎはなんじからなんじまでですか。', lectura: 'kaigi wa nanji kara nanji mode desuka', significado: '¿desde y hasta qué hora es la reunion?' },
+    { hiragana: 'ごごさんじはんからよじはんまでです。', lectura: 'gogo sanji han kara yoji han mode desu', significado: 'desde las 15:30 hasta las 16:30' },
+    { hiragana: 'ぎんこうはなんじからなんじまでですか。', lectura: 'ginkou wa nanji kara nanji mode desuka', significado: '¿Desde y hasta qué hora está el banco?' },
+    { hiragana: 'ごぜんくじからごごにじまでです。', lectura: 'gozen kuji kara gogo niji mode desu', significado: 'desde las 09:00 hasta las 14:00' },
+    { hiragana: 'としょかんはなんじからなんじまでですか。', lectura: 'toshokan wa nanji kara nanji mode desuka', significado: '¿Desde y hasta qué hora está la biblioteca?' },
+]
+
+const palabrasHiraganas = [...palabrasHiraganasV1, ...palabrasHiraganaV2, ...palabrasHiraganasV3];
 
