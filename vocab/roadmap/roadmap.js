@@ -2,7 +2,8 @@ const sections = [
     { name: "Saludos", emoji: "👋", xp: 0 },
     { name: "Familia", emoji: "👨‍👩‍👧", xp: 100 },
     { name: "Números", emoji: "🔢", xp: 200 },
-    { name: "Profesiones", emoji: "💼", xp: 300 }
+    { name: "Profesiones", emoji: "💼", xp: 300 },
+    { name: "Hora", emoji: "🕔", xp: 400 },
 ];
 
 const subSections = [

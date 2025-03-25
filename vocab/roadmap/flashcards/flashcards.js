@@ -112,6 +112,37 @@ const vocabulary = {
         { word: "じえいぎょう", romaji: "Jieigyou", meaning: "Empresario" },
         { word: "かんりにん", romaji: "Kanrinin", meaning: "Administrador" },
         { word: "アーティスト", romaji: "Aatisuto", meaning: "Artista" }
+    ],
+    "Hora": [
+        { word: "ごぜんろくじよんじゅうごふん", romaji: "gozen rokuji yonjuugofun", meaning: "06:45" },
+        { word: "ごぜんしちじにじゅっぷん", romaji: "gozen shichiji nijuppun", meaning: "07:20" },
+        { word: "ごごさんじごじゅうごふん", romaji: "gogo sanji gojuugofun", meaning: "15:55" },
+        { word: "ごぜんくじさんじゅうごふん", romaji: "gozen kuji sanjuugofun", meaning: "09:35" },
+        { word: "ごごはちじじゅっぷん", romaji: "gogo hachiji juppun", meaning: "20:10" },
+        { word: "ごごじゅういちじよんじゅうごふん", romaji: "gogo juuichiji yonjuugofun", meaning: "23:45" },
+        { word: "ごぜんいちじごじゅっぷん", romaji: "gozen ichiji gojuppun", meaning: "01:50" },
+        { word: "ごごよじさんじゅっぷん", romaji: "gogo yoji sanjuppun", meaning: "16:30" },
+        { word: "ごぜんはちじじゅうごふん", romaji: "gozen hachiji juugofun", meaning: "08:15" },
+        { word: "ごごろくじにじゅうごふん", romaji: "gogo rokuji nijuugofun", meaning: "18:25" },
+        { word: "ごぜんじゅうじさんじゅうごふん", romaji: "gozen juuji sanjuugofun", meaning: "10:35" },
+
+        { word: "かいぎはなんじからなんじまでですか。", romaji: "kaigi wa nanji kara nanji mode desuka", meaning: "¿desde y hasta qué hora es la reunion?" },
+        { word: "ごごさんじはんからよじはんまでです。", romaji: "gogo sanji han kara yoji han mode desu", meaning: "desde las 15:30 hasta las 16:30" },
+
+        { word: "しごとはなんじからなんじまでですか。", romaji: "shigoto wa nanji kara nanji made desuka", meaning: "¿Desde qué hora hasta qué hora es el trabajo?" },
+        { word: "ごぜんはちじからごごごじまでです。", romaji: "gozen hachiji kara gogo goji made desu", meaning: "Desde las 08:00 hasta las 17:00" },
+        
+        { word: "じゅぎょうはなんじからなんじまでですか。", romaji: "jugyou wa nanji kara nanji made desuka", meaning: "¿Desde qué hora hasta qué hora es la clase?" },
+        { word: "ごぜんくじからじゅういちじまでです。", romaji: "gozen kuji kara juuichiji made desu", meaning: "Desde las 09:00 hasta las 11:00" },
+        
+        { word: "えいがはなんじからなんじまでですか。", romaji: "eiga wa nanji kara nanji made desuka", meaning: "¿Desde qué hora hasta qué hora es la película?" },
+        { word: "ごごしちじからくじまでです。", romaji: "gogo shichiji kara kuji made desu", meaning: "Desde las 19:00 hasta las 21:00" },
+        
+        { word: "パーティーはなんじからなんじまでですか。", romaji: "paatii wa nanji kara nanji made desuka", meaning: "¿Desde qué hora hasta qué hora es la fiesta?" },
+        { word: "ごごはちじからじゅういちじまでです。", romaji: "gogo hachiji kara juuichiji made desu", meaning: "Desde las 20:00 hasta las 23:00" },
+        
+        { word: "てんらんかいはなんじからなんじまでですか。", romaji: "tenrankai wa nanji kara nanji made desuka", meaning: "¿Desde qué hora hasta qué hora es la exposición?" },
+        { word: "ごぜんじゅうじからごごさんじまでです。", romaji: "gozen juuji kara gogo sanji made desu", meaning: "Desde las 10:00 hasta las 15:00" },
     ]
 };
 
