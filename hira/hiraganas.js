@@ -205,13 +205,13 @@ const palabrasHiraganasV3 = [
     { hiragana: 'やすみはどようびとにちようびです。', lectura: 'yasumi wa doyoubi to nichiyoubi desu', significado: 'descanso los sábados y domingos' },
     { hiragana: 'しあいはげつようびです。', lectura: 'shiai wa getsuyoubi desu', significado: 'el partido es el lunes' },
     { hiragana: 'テストはもくようびです。', lectura: 'tesuto wa mokuyoubi desu', significado: 'el examen es el jueves' },
-    { hiragana: 'えいがはきんようびです。', lectura: 'mijikai', significado: 'película es el viernes' },
+    { hiragana: 'えいがはきんようびです。', lectura: 'eiga wa kinyoubi desu', significado: 'película es el viernes' },
 
-    { hiragana: 'かいぎはなんじからなんじまでですか。', lectura: 'kaigi wa nanji kara nanji mode desuka', significado: '¿desde y hasta qué hora es la reunion?' },
-    { hiragana: 'ごごさんじはんからよじはんまでです。', lectura: 'gogo sanji han kara yoji han mode desu', significado: 'desde las 15:30 hasta las 16:30' },
-    { hiragana: 'ぎんこうはなんじからなんじまでですか。', lectura: 'ginkou wa nanji kara nanji mode desuka', significado: '¿Desde y hasta qué hora está el banco?' },
-    { hiragana: 'ごぜんくじからごごにじまでです。', lectura: 'gozen kuji kara gogo niji mode desu', significado: 'desde las 09:00 hasta las 14:00' },
-    { hiragana: 'としょかんはなんじからなんじまでですか。', lectura: 'toshokan wa nanji kara nanji mode desuka', significado: '¿Desde y hasta qué hora está la biblioteca?' },
+    { hiragana: 'かいぎはなんじからなんじまでですか。', lectura: 'kaigi wa nanji kara nanji made desuka', significado: '¿desde y hasta qué hora es la reunion?' },
+    { hiragana: 'ごごさんじはんからよじはんまでです。', lectura: 'gogo sanji han kara yoji han made desu', significado: 'desde las 15:30 hasta las 16:30' },
+    { hiragana: 'ぎんこうはなんじからなんじまでですか。', lectura: 'ginkou wa nanji kara nanji made desuka', significado: '¿Desde y hasta qué hora está el banco?' },
+    { hiragana: 'ごぜんくじからごごにじまでです。', lectura: 'gozen kuji kara gogo niji made desu', significado: 'desde las 09:00 hasta las 14:00' },
+    { hiragana: 'としょかんはなんじからなんじまでですか。', lectura: 'toshokan wa nanji kara nanji made desuka', significado: '¿Desde y hasta qué hora está la biblioteca?' },
 ]
 
 const palabrasHiraganas = [...palabrasHiraganasV1, ...palabrasHiraganaV2, ...palabrasHiraganasV3];

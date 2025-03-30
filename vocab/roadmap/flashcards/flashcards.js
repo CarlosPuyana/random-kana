@@ -126,8 +126,8 @@ const vocabulary = {
         { word: "ごごろくじにじゅうごふん", romaji: "gogo rokuji nijuugofun", meaning: "18:25" },
         { word: "ごぜんじゅうじさんじゅうごふん", romaji: "gozen juuji sanjuugofun", meaning: "10:35" },
 
-        { word: "かいぎはなんじからなんじまでですか。", romaji: "kaigi wa nanji kara nanji mode desuka", meaning: "¿desde y hasta qué hora es la reunion?" },
-        { word: "ごごさんじはんからよじはんまでです。", romaji: "gogo sanji han kara yoji han mode desu", meaning: "desde las 15:30 hasta las 16:30" },
+        { word: "かいぎはなんじからなんじまでですか。", romaji: "kaigi wa nanji kara nanji made desuka", meaning: "¿desde y hasta qué hora es la reunion?" },
+        { word: "ごごさんじはんからよじはんまでです。", romaji: "gogo sanji han kara yoji han made desu", meaning: "desde las 15:30 hasta las 16:30" },
 
         { word: "しごとはなんじからなんじまでですか。", romaji: "shigoto wa nanji kara nanji made desuka", meaning: "¿Desde qué hora hasta qué hora es el trabajo?" },
         { word: "ごぜんはちじからごごごじまでです。", romaji: "gozen hachiji kara gogo goji made desu", meaning: "Desde las 08:00 hasta las 17:00" },
